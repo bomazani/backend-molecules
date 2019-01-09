@@ -1,0 +1,28 @@
+We have calculated all the possible height x width combinations of rectangles.
+
+We need to figure out how to find 4 strings that wrap around a given rectangle.
+
+Check the index of one string at the height value to see if it matches another string at
+the width value.
+
+For strings with a length of 12, need to check indices 3 to 10 for rectangles.
+- There must be a "tail" of at least one letter that extends beyond the intersection of strings
+at the beginning and end of each string,
+so the first and last indices of a string will never need to be searched.
+- The intersection of strings is "outside" of the rectangle.
+The second and next to last will either be a tail or an intersection,
+so they will never need to be searched.
+
+Need two horizontal strings and two vertical strings.
+1) Find the intersecting letters.
+2) Maximize the rectangle size.
+
+************ How to approach the problem **************
+Set constraints.
+Instead of trying to find intersections & then calculate the rectangle in the middle,
+start with the largest rectangle, then see if you can wrap the strings around the rectangle.
+If nothing fits, then you discard the rectangle and move to the next smallest rectangle.
+
+Need a list of possible rectangle height/width combinations.
+
+
